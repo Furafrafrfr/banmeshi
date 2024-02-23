@@ -29,8 +29,7 @@ const _loader: LoaderFunction = async ({ context, request }) => {
 };
 
 export const loader: LoaderFunction = async (args) => {
-  const loaderResult = await auth(args)(_loader);
-  return loaderResult;
+  return await auth(args)(_loader);
 };
 
 export default function Admin() {

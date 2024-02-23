@@ -1,4 +1,4 @@
-import type { LinksFunction } from "@remix-run/cloudflare";
+import type { LinksFunction, MetaFunction } from "@remix-run/cloudflare";
 import { cssBundleHref } from "@remix-run/css-bundle";
 import {
   Links,
@@ -14,6 +14,10 @@ import Footer from "./components/Footer";
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
 ];
+
+export const meta: MetaFunction = () => {
+  return [{ title: "晩飯決定器" }];
+};
 
 export default function App() {
   return (

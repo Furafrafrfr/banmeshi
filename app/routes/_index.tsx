@@ -1,13 +1,6 @@
-import type { LoaderFunction, MetaFunction } from "@remix-run/cloudflare";
+import type { LoaderFunction } from "@remix-run/cloudflare";
 import { useFetcher } from "@remix-run/react";
 import type { Env, Dish } from "~/types";
-
-export const meta: MetaFunction = () => {
-  return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
-  ];
-};
 
 export const loader: LoaderFunction = async ({ context }) => {
   const env = context.env as Env;
