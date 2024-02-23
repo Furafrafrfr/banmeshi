@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS dishes(name TEXT, link TEXT UNIQUE, memo TEXT);
